@@ -1,3 +1,4 @@
 20241006	09:00:01	7ec11073-7211-4dac-bf5e-bcbcf9783728	Error: Not allowed by Cors	OPTIONS	/	https://www.google.com
 20241006	09:00:01	c202274a-f2a7-483b-964d-aa74f9dc1828	Error: Not allowed by Cors	GET	/	https://www.google.com
 20241006	09:07:09	00be7f0e-110b-4956-9d9f-726f62229ba2	Error: Not allowed by Cors	GET	/	null
+20241006	18:05:29	584186a7-0a81-4555-8ba1-4a3c640a9b0f	SyntaxError: Unexpected end of JSON input	PATCH	/users	undefined
