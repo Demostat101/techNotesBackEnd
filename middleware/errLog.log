@@ -2,3 +2,9 @@
 20241006	09:00:01	c202274a-f2a7-483b-964d-aa74f9dc1828	Error: Not allowed by Cors	GET	/	https://www.google.com
 20241006	09:07:09	00be7f0e-110b-4956-9d9f-726f62229ba2	Error: Not allowed by Cors	GET	/	null
 20241006	18:05:29	584186a7-0a81-4555-8ba1-4a3c640a9b0f	SyntaxError: Unexpected end of JSON input	PATCH	/users	undefined
+20241006	19:10:12	901d3482-dd03-47d7-9196-4105e6645789	SyntaxError: Expected double-quoted property name in JSON at position 50	POST	/users	undefined
+20241006	19:19:52	496d421e-9a7c-41be-9a6b-138f2316157e	CastError: Cast to ObjectId failed for value "6702b6685fecf8c932c495eg" (type string) at path "_id" for model "User"	PATCH	/users	undefined
+20241006	19:23:51	0f0dac2f-39d1-489c-92ee-c7121bae1e40	CastError: Cast to ObjectId failed for value "6702b6685fecf8c932c495eg" (type string) at path "_id" for model "User"	PATCH	/users	undefined
+20241006	19:27:10	e7b3be8e-d85a-48bd-a9a4-cf725702a642	CastError: Cast to ObjectId failed for value "6702b6685fecf8c932c495egf" (type string) at path "_id" for model "User"	PATCH	/users	undefined
+20241006	19:34:44	a49d7428-fc81-48b7-aa32-9aeba8fd55e0	CastError: Cast to ObjectId failed for value "6702b6685fecf8c932c495eg" (type string) at path "_id" for model "User"	PATCH	/users	undefined
+20241006	19:38:57	f1edd87b-736a-4bf2-8227-575de3005cbd	CastError: Cast to ObjectId failed for value "6702b6685fecf8c932c495eg" (type string) at path "_id" for model "User"	PATCH	/users	undefined

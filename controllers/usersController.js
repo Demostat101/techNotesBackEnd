@@ -68,7 +68,7 @@ const updateUser = asyncHandler(async(req,res)=>{
     const {id, username, roles, active,password} = req.body;
 
     //confirm data
-    if (!id || !username || !password || !Array.isArray(roles) || !roles.length || typeof active !== "boolean") {
+    if (!id || !username || !Array.isArray(roles) || !roles.length || typeof active !== "boolean") {
         return res.status(400).json({message:"All fields are required"})
     }
 
@@ -97,7 +97,7 @@ const updateUser = asyncHandler(async(req,res)=>{
 
     const updatedUser = await user.save()
 
-    res.json({message:`${updatedUser.username} updated`})
+    res.json({message:`${updatedUser.username} updated`});
 
 })
 
@@ -106,31 +106,32 @@ const updateUser = asyncHandler(async(req,res)=>{
 //@route DELETE /users
 //@access Private
 
-const deleteUser = asyncHandler(async(req,res)=>{
-
-    const {id} = req.body
+const deleteUser = asyncHandler(async (req, res) => {
+    const { id } = req.body;
 
     if (!id) {
-        return res.status(400).json({message:"User ID Required"})
+        return res.status(400).json({ message: "User ID Required" });
     }
 
-    const notes = await Note.findOne({user: id}).lean().exec()
-
-    if (notes?.length) {
-        return res.status(400).json({message:"User has assigned notes"})
+    // Check for notes associated with the user
+    const note = await Note.findOne({ user: id }).lean().exec();
+    if (note) { // note will be null if no notes are found
+        return res.status(400).json({ message: "User has assigned notes" });
     }
 
-    const user = await User.findById(id).exec()
+    // Find the user by ID
+    const user = await User.findById(id).exec();
     if (!user) {
-        return res.status(400).json({message:"User not found"})
+        return res.status(404).json({ message: "User not found" }); // Use 404 for not found
     }
 
-    const result = await user.deleteOne()
+    // Delete the user
+    await user.deleteOne();
 
-    const reply = `Username ${result.username} with ID ${result._id} deleted`
-    res.json({reply})
+    const reply = `Username ${user.username} with ID ${user._id} deleted`; // Access user before deletion
+    res.json({ reply });
+});
 
-})
 
 module.exports = {
     getAllUsers,
