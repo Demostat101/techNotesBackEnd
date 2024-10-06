@@ -1,5 +1,5 @@
 const express = require('express');
-const routes = require("./routes");
+const routes = require("./routes/userRoutes");
 const { logger, logEvents } = require("./middleware/logger");
 const { errorHandler } = require("./middleware/errorHandler");
 const cookieParser = require("cookie-parser");
@@ -31,6 +31,8 @@ app.use(cookieParser());
 
 // Routes
 app.use("/", routes);
+
+app.use("/users", routes)
 
 // Error handling middleware
 app.use(errorHandler);
