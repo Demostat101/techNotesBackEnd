@@ -1,31 +1,33 @@
-const express = require('express')
-const routes = require("./routes")
-const bodyParser = require('body-parser')
-const {logger} = require("./middleware/logger")
-const {errorHandler} = require("./middleware/errorHandler")
-const cookieParser = require("cookie-parser")
-const cors = require('cors')
+const express = require('express');
+const routes = require("./routes");
+const { logger } = require("./middleware/logger");
+const { errorHandler } = require("./middleware/errorHandler");
+const cookieParser = require("cookie-parser");
+const cors = require('cors');
+const corsOptions = require("./config/corsOptions");
 require("dotenv").config();
 
-
 const app = express();
-const PORT = process.env.PORT || 4500
-app.use(logger)
+const PORT = process.env.PORT || 4500;
+
+// Use the logger middleware
+app.use(logger);
+
+// Use CORS middleware
+app.use(cors(corsOptions));
 
 // Middleware for parsing JSON
-app.use(express.json());
-app.use(bodyParser.json()); // Correct usage
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.json()); // Use built-in express.json() only
+app.use(express.urlencoded({ extended: true })); // Use built-in express.urlencoded()
 
 // Use the cookie-parser middleware
 app.use(cookieParser());
 
-//routes
+// Routes
 app.use("/", routes);
 
-// Middleware for parsing URL-encoded data
-app.use(express.urlencoded({ extended: true }));
+// Error handling middleware
+app.use(errorHandler);
 
-app.use(errorHandler)
-
-app.listen(PORT, ()=> console.log(`server running on port ${PORT}`));
+// Start the server
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
