@@ -1,5 +1,6 @@
 const express = require('express');
-const routes = require("./routes/userRoutes");
+const userRoutes = require("./routes/userRoutes");
+const notesRoutes = require("./routes/noteRoutes")
 const { logger, logEvents } = require("./middleware/logger");
 const { errorHandler } = require("./middleware/errorHandler");
 const cookieParser = require("cookie-parser");
@@ -30,9 +31,10 @@ app.use(express.urlencoded({ extended: true })); // Use built-in express.urlenco
 app.use(cookieParser());
 
 // Routes
-app.use("/", routes);
+// app.use("/", routes);
 
-app.use("/users", routes)
+app.use("/users", userRoutes)
+app.use("/notes", notesRoutes)
 
 // Error handling middleware
 app.use(errorHandler);
