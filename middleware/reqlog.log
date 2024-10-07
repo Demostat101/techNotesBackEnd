@@ -117,3 +117,12 @@
 20241007	13:34:20	ba7db9fb-b6b5-41c1-ac71-430b32a2b4c5	DELETE	/notes	undefined
 20241007	13:34:44	0870e677-2a1d-484d-84a9-f691f262ba9d	DELETE	/users	undefined
 20241007	13:35:01	873576a1-4857-4c9e-9aa9-de85cd2fcb31	DELETE	/users	undefined
+20241007	14:15:50	fa13dd83-592d-4b9b-a0f2-c04a783e5e65	POST	/users	undefined
+20241007	14:16:31	1e03521f-b7f8-461e-be23-a5a11f04e3be	POST	/	undefined
+20241007	14:18:05	270e779d-ebb2-48d6-bfd1-93a05a83c460	POST	/auth	undefined
+20241007	14:27:34	97de7479-b85b-4675-82ff-05bd4f0d702b	POST	/	undefined
+20241007	14:28:07	95f6a420-f885-4165-a5df-0d43e7dff594	POST	/auth	undefined
+20241007	14:29:30	7b3756c0-70ac-4694-b3c5-75568196bd6a	POST	/auth	undefined
+20241007	14:37:33	127f54d1-fe93-4912-9fc2-db4c02f8ec8f	POST	/auth	undefined
+20241007	14:41:52	d950fe73-9c3e-4bd4-b339-1ebcf1ecbd96	POST	/auth	undefined
+20241007	14:44:00	1cf808c1-2889-4ed0-bfe4-3cade7432933	POST	/auth	undefined

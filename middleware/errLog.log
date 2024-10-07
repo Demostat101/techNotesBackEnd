@@ -11,3 +11,6 @@
 20241007	13:03:22	05610fd2-09ad-4fec-99c7-c8dff68380d3	ValidationError: Note validation failed: user: Cast to ObjectId failed for value "Ademola" (type string) at path "user" because of "BSONError"	POST	/notes	undefined
 20241007	13:10:36	9cac3b0e-43b9-44bb-b02f-207d1ba215f5	SyntaxError: Expected ',' or '}' after property value in JSON at position 106	GET	/notes	undefined
 20241007	13:30:22	c34bb868-78e7-416a-a492-030589bc5f30	ReferenceError: result is not defined	DELETE	/notes	undefined
+20241007	14:28:07	d178ff47-d157-46ea-b48d-7f613acd0e7a	Error: secretOrPrivateKey must have a value	POST	/auth	undefined
+20241007	14:29:30	8e355d42-dd70-49ef-b293-ed4d1919e47a	Error: secretOrPrivateKey must have a value	POST	/auth	undefined
+20241007	14:37:33	b3191c93-9a7a-4480-aab7-73497d4bb4c1	Error: secretOrPrivateKey must have a value	POST	/auth	undefined

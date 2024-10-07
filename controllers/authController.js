@@ -2,6 +2,8 @@ const User = require('../models/User')
 const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
 const asyncHandler = require('express-async-handler')
+require('dotenv').config();
+
 
 // @desc Login
 // @route POST /auth
@@ -50,6 +52,7 @@ const login = asyncHandler(async (req, res) => {
 
     // Send accessToken containing username and roles 
     res.json({ accessToken })
+    
 })
 
 // @desc Refresh
