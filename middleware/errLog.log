@@ -8,3 +8,6 @@
 20241006	19:27:10	e7b3be8e-d85a-48bd-a9a4-cf725702a642	CastError: Cast to ObjectId failed for value "6702b6685fecf8c932c495egf" (type string) at path "_id" for model "User"	PATCH	/users	undefined
 20241006	19:34:44	a49d7428-fc81-48b7-aa32-9aeba8fd55e0	CastError: Cast to ObjectId failed for value "6702b6685fecf8c932c495eg" (type string) at path "_id" for model "User"	PATCH	/users	undefined
 20241006	19:38:57	f1edd87b-736a-4bf2-8227-575de3005cbd	CastError: Cast to ObjectId failed for value "6702b6685fecf8c932c495eg" (type string) at path "_id" for model "User"	PATCH	/users	undefined
+20241007	13:03:22	05610fd2-09ad-4fec-99c7-c8dff68380d3	ValidationError: Note validation failed: user: Cast to ObjectId failed for value "Ademola" (type string) at path "user" because of "BSONError"	POST	/notes	undefined
+20241007	13:10:36	9cac3b0e-43b9-44bb-b02f-207d1ba215f5	SyntaxError: Expected ',' or '}' after property value in JSON at position 106	GET	/notes	undefined
+20241007	13:30:22	c34bb868-78e7-416a-a492-030589bc5f30	ReferenceError: result is not defined	DELETE	/notes	undefined
