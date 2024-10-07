@@ -38,6 +38,8 @@ app.use("/notes", notesRoutes)
 app.use("/refresh", authRoutes)
 app.use("/logout", authRoutes)
 app.use("/auth", authRoutes);
+app.use("/auth/refresh", authRoutes);
+app.use("/auth/logout", authRoutes);
 
 // Error handling middleware
 app.use(errorHandler);
